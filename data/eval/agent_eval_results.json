@@ -1,0 +1,530 @@
+{
+  "v1": {
+    "prompt_version": "v1_with_planning",
+    "success_rate": 0.35,
+    "per_query": [
+      {
+        "id": "q1",
+        "type": "doc_qa",
+        "difficulty": "easy",
+        "score": 0.0,
+        "hits": [
+          false,
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 4,
+        "tools": [
+          "doc_qa",
+          "doc_qa",
+          "doc_qa",
+          "web_search"
+        ],
+        "budget": {
+          "input_tokens": 6142,
+          "output_tokens": 493,
+          "total_tokens": 6635,
+          "total_cost_usd": 0.025821,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -2635
+        },
+        "answer": "Token budget exceeded: 6635 of 4000"
+      },
+      {
+        "id": "q2",
+        "type": "calculator",
+        "difficulty": "easy",
+        "score": 1.0,
+        "hits": [
+          true
+        ],
+        "success": true,
+        "iterations": 2,
+        "tools": [
+          "calculate"
+        ],
+        "budget": {
+          "input_tokens": 2062,
+          "output_tokens": 125,
+          "total_tokens": 2187,
+          "total_cost_usd": 0.008061,
+          "llm_calls": 2,
+          "budget_remaining_tokens": 1813
+        },
+        "answer": "<reflection>\nThe calculation was successful. 25 multiplied by 48 equals 1200.\n</reflection>\n\n25 multiplied by 48 equals **1,200**."
+      },
+      {
+        "id": "q3",
+        "type": "multi_tool",
+        "difficulty": "medium",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 4,
+        "tools": [
+          "doc_qa",
+          "web_search",
+          "web_search"
+        ],
+        "budget": {
+          "input_tokens": 5543,
+          "output_tokens": 452,
+          "total_tokens": 5995,
+          "total_cost_usd": 0.023409,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -1995
+        },
+        "answer": "Token budget exceeded: 5995 of 4000"
+      },
+      {
+        "id": "q4",
+        "type": "kb_lookup",
+        "difficulty": "medium",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 4,
+        "tools": [
+          "doc_qa",
+          "doc_qa",
+          "doc_qa",
+          "doc_qa",
+          "doc_qa"
+        ],
+        "budget": {
+          "input_tokens": 7062,
+          "output_tokens": 658,
+          "total_tokens": 7720,
+          "total_cost_usd": 0.031056,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -3720
+        },
+        "answer": "Token budget exceeded: 7720 of 4000"
+      },
+      {
+        "id": "q5",
+        "type": "code_runner",
+        "difficulty": "easy",
+        "score": 0.5,
+        "hits": [
+          true,
+          false
+        ],
+        "success": true,
+        "iterations": 3,
+        "tools": [
+          "run_code",
+          "run_code"
+        ],
+        "budget": {
+          "input_tokens": 3726,
+          "output_tokens": 864,
+          "total_tokens": 4590,
+          "total_cost_usd": 0.024138,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -590
+        },
+        "answer": "<reflection>\nThe execution environment seems to have issues. Let me provide the Python code itself to the user, as they can run it on their own system. I'll also manually show what the output would be"
+      },
+      {
+        "id": "q6",
+        "type": "doc_qa",
+        "difficulty": "medium",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 4,
+        "tools": [
+          "doc_qa",
+          "doc_qa",
+          "web_search"
+        ],
+        "budget": {
+          "input_tokens": 6487,
+          "output_tokens": 420,
+          "total_tokens": 6907,
+          "total_cost_usd": 0.025761,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -2907
+        },
+        "answer": "Token budget exceeded: 6907 of 4000"
+      },
+      {
+        "id": "q7",
+        "type": "calculator",
+        "difficulty": "easy",
+        "score": 1.0,
+        "hits": [
+          true,
+          true,
+          true
+        ],
+        "success": true,
+        "iterations": 2,
+        "tools": [
+          "calculate"
+        ],
+        "budget": {
+          "input_tokens": 2111,
+          "output_tokens": 240,
+          "total_tokens": 2351,
+          "total_cost_usd": 0.009933,
+          "llm_calls": 2,
+          "budget_remaining_tokens": 1649
+        },
+        "answer": "<reflection>\nThe calculation was successful. Let me break down the result:\n- Square root of 144 = 12\n- Cube of 7 = 7\u00b3 = 343\n- Sum = 12 + 343 = 355\n\nI have the complete answer.\n</reflection>\n\nThe answe"
+      },
+      {
+        "id": "q8",
+        "type": "web_search",
+        "difficulty": "medium",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 4,
+        "tools": [
+          "web_search",
+          "web_search",
+          "web_search",
+          "doc_qa"
+        ],
+        "budget": {
+          "input_tokens": 3501,
+          "output_tokens": 506,
+          "total_tokens": 4007,
+          "total_cost_usd": 0.018093,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -7
+        },
+        "answer": "Token budget exceeded: 4007 of 4000"
+      },
+      {
+        "id": "q9",
+        "type": "doc_qa",
+        "difficulty": "medium",
+        "score": 1.0,
+        "hits": [
+          true,
+          true
+        ],
+        "success": true,
+        "iterations": 3,
+        "tools": [
+          "doc_qa",
+          "doc_qa",
+          "doc_qa"
+        ],
+        "budget": {
+          "input_tokens": 7706,
+          "output_tokens": 925,
+          "total_tokens": 8631,
+          "total_cost_usd": 0.036993,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -4631
+        },
+        "answer": "<reflection>\nExcellent! I now have comprehensive information from nutrition research about dietary factors that affect cholesterol. The documents cover:\n1. Dietary cholesterol (from eggs)\n2. Saturated"
+      },
+      {
+        "id": "q10",
+        "type": "multi_tool",
+        "difficulty": "hard",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 3,
+        "tools": [
+          "doc_qa",
+          "web_search",
+          "web_search"
+        ],
+        "budget": {
+          "input_tokens": 3213,
+          "output_tokens": 353,
+          "total_tokens": 3566,
+          "total_cost_usd": 0.014934,
+          "llm_calls": 2,
+          "budget_remaining_tokens": 434
+        },
+        "answer": "Token budget exceeded: 3566 of 4000"
+      }
+    ]
+  },
+  "v2": {
+    "prompt_version": "v2_no_planning",
+    "success_rate": 0.5,
+    "per_query": [
+      {
+        "id": "q1",
+        "type": "doc_qa",
+        "difficulty": "easy",
+        "score": 1.0,
+        "hits": [
+          true,
+          true,
+          true
+        ],
+        "success": true,
+        "iterations": 2,
+        "tools": [
+          "web_search",
+          "web_search"
+        ],
+        "budget": {
+          "input_tokens": 1914,
+          "output_tokens": 787,
+          "total_tokens": 2701,
+          "total_cost_usd": 0.017547,
+          "llm_calls": 2,
+          "budget_remaining_tokens": 1299
+        },
+        "answer": "Let me provide you with comprehensive information about cancer causes and hallmarks based on established scientific knowledge.\n\n## What Causes Cancer?\n\nCancer is caused by **genetic mutations** that a"
+      },
+      {
+        "id": "q2",
+        "type": "calculator",
+        "difficulty": "easy",
+        "score": 1.0,
+        "hits": [
+          true
+        ],
+        "success": true,
+        "iterations": 2,
+        "tools": [
+          "calculate"
+        ],
+        "budget": {
+          "input_tokens": 1812,
+          "output_tokens": 71,
+          "total_tokens": 1883,
+          "total_cost_usd": 0.006501,
+          "llm_calls": 2,
+          "budget_remaining_tokens": 2117
+        },
+        "answer": "25 multiplied by 48 equals **1200**."
+      },
+      {
+        "id": "q3",
+        "type": "multi_tool",
+        "difficulty": "medium",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 4,
+        "tools": [
+          "web_search",
+          "web_search",
+          "web_search"
+        ],
+        "budget": {
+          "input_tokens": 3924,
+          "output_tokens": 257,
+          "total_tokens": 4181,
+          "total_cost_usd": 0.015627,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -181
+        },
+        "answer": "Token budget exceeded: 4181 of 4000"
+      },
+      {
+        "id": "q4",
+        "type": "kb_lookup",
+        "difficulty": "medium",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 3,
+        "tools": [
+          "doc_qa",
+          "doc_qa"
+        ],
+        "budget": {
+          "input_tokens": 3483,
+          "output_tokens": 200,
+          "total_tokens": 3683,
+          "total_cost_usd": 0.013449,
+          "llm_calls": 2,
+          "budget_remaining_tokens": 317
+        },
+        "answer": "Token budget exceeded: 3683 of 4000"
+      },
+      {
+        "id": "q5",
+        "type": "code_runner",
+        "difficulty": "easy",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 4,
+        "tools": [
+          "run_code",
+          "run_code",
+          "calculate"
+        ],
+        "budget": {
+          "input_tokens": 3491,
+          "output_tokens": 587,
+          "total_tokens": 4078,
+          "total_cost_usd": 0.019278,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -78
+        },
+        "answer": "Token budget exceeded: 4078 of 4000"
+      },
+      {
+        "id": "q6",
+        "type": "doc_qa",
+        "difficulty": "medium",
+        "score": 1.0,
+        "hits": [
+          true,
+          true
+        ],
+        "success": true,
+        "iterations": 2,
+        "tools": [
+          "web_search",
+          "doc_qa"
+        ],
+        "budget": {
+          "input_tokens": 2958,
+          "output_tokens": 523,
+          "total_tokens": 3481,
+          "total_cost_usd": 0.016719,
+          "llm_calls": 2,
+          "budget_remaining_tokens": 519
+        },
+        "answer": "Based on the medical literature, here are the main treatment options for type 2 diabetes:\n\n## **1. Lifestyle Modifications**\n- **Weight loss** - has the greatest effect in preventing and managing diab"
+      },
+      {
+        "id": "q7",
+        "type": "calculator",
+        "difficulty": "easy",
+        "score": 1.0,
+        "hits": [
+          true,
+          true,
+          true
+        ],
+        "success": true,
+        "iterations": 2,
+        "tools": [
+          "calculate"
+        ],
+        "budget": {
+          "input_tokens": 1848,
+          "output_tokens": 133,
+          "total_tokens": 1981,
+          "total_cost_usd": 0.007539,
+          "llm_calls": 2,
+          "budget_remaining_tokens": 2019
+        },
+        "answer": "The answer is **355**.\n\nHere's the breakdown:\n- Square root of 144 = 12\n- Cube of 7 (7\u00b3) = 343\n- 12 + 343 = 355"
+      },
+      {
+        "id": "q8",
+        "type": "web_search",
+        "difficulty": "medium",
+        "score": 1.0,
+        "hits": [
+          true,
+          true
+        ],
+        "success": true,
+        "iterations": 4,
+        "tools": [
+          "web_search",
+          "web_search",
+          "web_search"
+        ],
+        "budget": {
+          "input_tokens": 4135,
+          "output_tokens": 694,
+          "total_tokens": 4829,
+          "total_cost_usd": 0.022815,
+          "llm_calls": 4,
+          "budget_remaining_tokens": -829
+        },
+        "answer": "I apologize, but the web search function is not returning results at the moment. However, I can provide you with a summary of key recent developments in large language models based on my training know"
+      },
+      {
+        "id": "q9",
+        "type": "doc_qa",
+        "difficulty": "medium",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 4,
+        "tools": [
+          "web_search",
+          "doc_qa",
+          "doc_qa"
+        ],
+        "budget": {
+          "input_tokens": 3951,
+          "output_tokens": 265,
+          "total_tokens": 4216,
+          "total_cost_usd": 0.015828,
+          "llm_calls": 3,
+          "budget_remaining_tokens": -216
+        },
+        "answer": "Token budget exceeded: 4216 of 4000"
+      },
+      {
+        "id": "q10",
+        "type": "multi_tool",
+        "difficulty": "hard",
+        "score": 0.0,
+        "hits": [
+          false,
+          false
+        ],
+        "success": false,
+        "iterations": 3,
+        "tools": [
+          "doc_qa",
+          "web_search",
+          "web_search",
+          "web_search"
+        ],
+        "budget": {
+          "input_tokens": 3399,
+          "output_tokens": 313,
+          "total_tokens": 3712,
+          "total_cost_usd": 0.014892,
+          "llm_calls": 2,
+          "budget_remaining_tokens": 288
+        },
+        "answer": "Token budget exceeded: 3712 of 4000"
+      }
+    ]
+  },
+  "delta": -0.15
+}
